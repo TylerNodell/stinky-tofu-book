@@ -1,0 +1,28 @@
+{
+  "name": "stinky-tofu",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-flip-page": "^1.5.0",
+    "react-scripts": "2.1.1",
+    "react-switch": "^3.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "aws s3 cp build s3://stinkytofubook.com --recursive",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
