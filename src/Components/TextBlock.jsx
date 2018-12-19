@@ -9,7 +9,7 @@ export default class TextBlock extends Component {
         return <div>
           <h1 style={{margin: "auto", textAlign: 'center'}}>Book Summary</h1>
           <br/>
-          <p style={{lineHeight: '26pt', fontSize: '16pt'}}> In this hilarious clash of cultures on steroids, conservative NYC Jewish banker Sam Lowe, falls head over heels for Linda Liu, a stunning Chinese immigrant. His desire to marry her requires a trip to Taiwan to get her mother's approval. Sam’s travels are rife with awkward and embarrassing situations as he struggles like a buffoon with the language barrier, a horde of potential in-laws, bizarre foods and befuddling Asian customs. Upon their return to New York, tensions ratchet up to an explosive level as Linda’s large family begins their mass migration from Asia to the couple’s tiny upper west side apartment. </p>
+          <p style={{lineHeight: '26pt', fontSize: '16pt'}} id="book-summary"> In this hilarious clash of cultures on steroids, conservative NYC Jewish banker Sam Lowe, falls head over heels for Linda Liu, a stunning Chinese immigrant. His desire to marry her requires a trip to Taiwan to get her mother's approval. Sam’s travels are rife with awkward and embarrassing situations as he struggles like a buffoon with the language barrier, a horde of potential in-laws, bizarre foods and befuddling Asian customs. Upon their return to New York, tensions ratchet up to an explosive level as Linda’s large family begins their mass migration from Asia to the couple’s tiny upper west side apartment. </p>
         </div>
       } else {
         return <div>
@@ -40,7 +40,7 @@ export default class TextBlock extends Component {
       color: this.props.textColor,
       width: '60%',
       float: this.props.float,
-      margin: this.props.float === 'right' ? "5% 2.5% 0 2.5%" : "5% 2.5% 0 2.5%",
+      margin: this.props.float === 'right' ? "10vh" : "5% 2.5% 0 2.5%",
       textAlign: 'justify'
     }
     return (

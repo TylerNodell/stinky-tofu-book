@@ -27,7 +27,7 @@ export default class bookImage extends Component {
   
     return (
       <div style={divStyle}>
-        <img src={BookImage} style={bookBlock} alt={'Book Image'} onMouseEnter={() => this.bookHover()} onMouseLeave={() => this.bookHover()} ></img>
+        <img src={BookImage} style={bookBlock} alt="" onMouseEnter={() => this.bookHover()} onMouseLeave={() => this.bookHover()} ></img>
       </div>
     )
   }

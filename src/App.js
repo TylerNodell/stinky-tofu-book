@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from './Components/Home'
-import TitleBar from './Components/TitleBar'
+import DescriptionBackground from "./Components/DescriptionBackground";
+// import TitleBar from './Components/TitleBar'
 import Preview from './Components/SamplePage'
 // import CoverImage from "./imgs/StinkyTofu - Front Cover Only.jpg"
 import './App.css';
@@ -21,12 +22,12 @@ class App extends Component {
   }
 
   render() {
-    
     return (
       <div className="App">
-        <TitleBar handleLanguage={this.handleLanguage} language={this.state.language}/>
-        <Home language={this.state.language}/>
-        <Preview/>
+        {/* <TitleBar handleLanguage={this.handleLanguage} language={this.state.language}/> */}
+        <DescriptionBackground language={this.state.language}/>
+        {/* <Home language={this.state.language}/> */}
+        {/* <Preview/> */}
       </div>
     );
   }

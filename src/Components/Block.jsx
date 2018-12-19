@@ -17,7 +17,7 @@ export default class Block extends Component {
       backgroundColor: this.props.color
     }
     return (
-      <div style={blockStyles}>
+      <div style={blockStyles} className={this.props.className}>
         <TextBlock language={this.props.language} float={this.props.float} textColor={this.props.textColor} className={this.props.className}/>
         {this.profilePicture()}
       </div>

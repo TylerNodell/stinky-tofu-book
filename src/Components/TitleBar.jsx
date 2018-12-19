@@ -33,7 +33,7 @@ export default class TitleBar extends Component {
     return (
       <div style={titleStyle}>
         {/* <h1 style={{float: 'left', margin: '8px auto'}}>Stinky Tofu</h1> */}
-        <img src={logo} style={logoStyle}></img>
+        <img src={logo} alt="" style={logoStyle}/>
         {/* <h2 style={{float: 'left', margin: '15px auto auto 15px', backgroundColor: '#FFC53A'}} >Home</h2> */}
         <a href='http://amazon.com'><img src={Amazon} style={amazonStyle} alt="Amazon Link"/></a>
         <LanguageButton handleLanguage={this.props.handleLanguage}/>
