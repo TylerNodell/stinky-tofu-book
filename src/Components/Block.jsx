@@ -13,7 +13,9 @@ export default class Block extends Component {
   render() {
     const blockStyles = {
       color: 'white',
-      height: '500px',
+      margin: '0 0 0 5%',
+      height: '80%',
+      width: '70%',
       backgroundColor: this.props.color
     }
     return (

@@ -22,7 +22,7 @@ export default class bookImage extends Component {
       top: '75px',
       left: '-30%',
       transition: 'transform .2s',
-      transform: this.state.expanded === false ? 'scale(1)' : 'scale(1.2)'
+      transform: this.state.expanded === false ? 'scale(1)' : 'scale(1.1)'
     }
   
     return (
