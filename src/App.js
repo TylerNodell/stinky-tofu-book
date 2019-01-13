@@ -26,6 +26,7 @@ class App extends Component {
       <div className="App">
         {/* <TitleBar handleLanguage={this.handleLanguage} language={this.state.language}/> */}
         <DescriptionBackground language={this.state.language}/>
+        
         {/* <Home language={this.state.language}/> */}
         {/* <Preview/> */}
       </div>

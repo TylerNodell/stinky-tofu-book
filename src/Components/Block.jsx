@@ -12,10 +12,9 @@ export default class Block extends Component {
 
   render() {
     const blockStyles = {
-      color: 'white',
-      margin: '0 0 0 5%',
-      height: '80%',
-      width: '70%',
+      position: 'relative',
+      height: '100%',
+      width: '100%',
       backgroundColor: this.props.color
     }
     return (

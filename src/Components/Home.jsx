@@ -17,7 +17,7 @@ export default class Home extends Component {
           <div style={innerBlock}>
             <Header/>
             <Block language={this.props.language} color='#FCF294' float='right' textColor='black' className="Summary"/>
-            <Block language={this.props.language} color='#704E2E' float='left' class="author" textColor='white' className="Author"/>
+            {/* <Block language={this.props.language} color='#704E2E' float='left' class="author" textColor='white' className="Author"/> */}
           </div>
       </div>
     )

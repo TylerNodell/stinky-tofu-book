@@ -16,8 +16,8 @@ export default class bookImage extends Component {
       position: 'relative',
       color: 'white',
       backgroundColor: 'yellow',
-      width: '400px',
-      height: '550px',
+      width: '500px',
+      height: '650px',
       zIndex: '1000',
       top: '75px',
       left: '-30%',
@@ -27,7 +27,7 @@ export default class bookImage extends Component {
   
     return (
       <div style={divStyle}>
-        <img src={BookImage} style={bookBlock} alt="" onMouseEnter={() => this.bookHover()} onMouseLeave={() => this.bookHover()} ></img>
+        <img src={BookImage} style={bookBlock} className="bookImage" alt="" onMouseEnter={() => this.bookHover()} onMouseLeave={() => this.bookHover()} ></img>
       </div>
     )
   }

@@ -5,8 +5,9 @@ export default class AuthorCard extends Component {
   render() {
     const styles = {
       width: '30%',
-      margin: "10% 2.5% 10% 2.5%",
-      float: 'right'
+      margin: "10% 2.5% 10% 1.5%",
+      float: 'left',
+      position: 'absolute'
     }
     const imageStyle = {
       width: "80%",

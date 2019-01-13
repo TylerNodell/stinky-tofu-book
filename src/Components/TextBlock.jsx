@@ -7,9 +7,9 @@ export default class TextBlock extends Component {
       // eslint-disable-next-line no-unused-expressions
       if (this.props.language === true) {
         return <div>
-          <h1 style={{margin: "auto", textAlign: 'center'}}>Book Summary</h1>
+          <h1 style={{margin: "auto", textAlign: 'center', fontSize: '4vh'}}>Book Summary</h1>
           <br/>
-          <p style={{lineHeight: '26pt', fontSize: '16pt'}} id="book-summary"> In this hilarious clash of cultures on steroids, conservative NYC Jewish banker Sam Lowe, falls head over heels for Linda Liu, a stunning Chinese immigrant. His desire to marry her requires a trip to Taiwan to get her mother's approval. Sam’s travels are rife with awkward and embarrassing situations as he struggles like a buffoon with the language barrier, a horde of potential in-laws, bizarre foods and befuddling Asian customs. Upon their return to New York, tensions ratchet up to an explosive level as Linda’s large family begins their mass migration from Asia to the couple’s tiny upper west side apartment. </p>
+          <p style={{lineHeight: '4vh', fontSize: '3.4vh'}} id="book-summary"> In this hilarious clash of cultures on steroids, conservative NYC Jewish banker Sam Lowe, falls head over heels for Linda Liu, a stunning Chinese immigrant. His desire to marry her requires a trip to Taiwan to get her mother's approval. Sam’s travels are rife with awkward and embarrassing situations as he struggles like a buffoon with the language barrier, a horde of potential in-laws, bizarre foods and befuddling Asian customs. Upon their return to New York, tensions ratchet up to an explosive level as Linda’s large family begins their mass migration from Asia to the couple’s tiny upper west side apartment. </p>
         </div>
       } else {
         return <div>
@@ -21,8 +21,8 @@ export default class TextBlock extends Component {
     } else if (this.props.className === "Author") {
       if (this.props.language === true) {
         return <div>
-          <h1 style={{width: '100%', margin: 'auto', textAlign: "center"}}>About the Author</h1>
-          <p style={{lineHeight: '21pt', fontSize: '14pt'}}>ROSS NODELL was born and raised in Chicago. He relocated to New York City in the late 80s to marry a Chinese woman.  Little did he know her entire family was part of the deal. Ross worked on Wall Street before starting his own real estate investment firm. He now follows his passion as a writer.
+          <h1 style={{width: '100%', margin: 'auto', textAlign: "center", fontSize: '4vh'}}>About the Author</h1>
+          <p style={{lineHeight: '4vh', fontSize: '2.5vh'}}>ROSS NODELL was born and raised in Chicago. He relocated to New York City in the late 80s to marry a Chinese woman.  Little did he know her entire family was part of the deal. Ross worked on Wall Street before starting his own real estate investment firm. He now follows his passion as a writer.
   Ross draws material from a wealth of life experience as a world traveler.  He's a true adventure-seeker having climbed Mount Rainer in Washington State, and The Grand Teton in Wyoming; scuba dived with hammerhead sharks off the North Wall in Grand Cayman; walked Kruger National Park searching for water buffalo; biked through the South of France; and windsurfed the Maldives.
   Ross has a love affair with food and wine, always seeking out new and exotic cuisines, no matter how peculiar or offensive. He brings all these adventures to his readers through the lens of a comical microscope.</p>
         </div>

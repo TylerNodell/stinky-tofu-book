@@ -7,6 +7,20 @@
   height: 40vmin;
 }
 
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -31,9 +45,23 @@
   }
 }
 
+.bookBlock {
+  position: relative;
+  color: white;
+  background-color: yellow;
+  width: 400px;
+  height: 550px;
+  z-index: 1000;
+  top: 75px;
+  left: -30%;
+  transition: transform .2s;
+}
+
 .description-display-block {
-  width: 100%;
+  width: 99vw;
   height: 100vh;
+  min-width: 1920px;
+  margin: auto;
   /* background-color: blue; */
   position: relative;
   background-image: url('./imgs/TaiwanBanner.jpg');
@@ -43,12 +71,20 @@
 }
 
 .Summary {
-  width: 80%;
-  left: 10%;
+  width: 100%;
+  left: 0%;
   position:absolute; 
   bottom:0;
 }
 
 #book-summary {
   margin:right
+}
+
+button:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s; 
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite; 
 }
