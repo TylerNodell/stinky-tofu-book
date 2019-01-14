@@ -58,13 +58,13 @@
 }
 
 .description-display-block {
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   min-width: 1920px;
   margin: auto;
   /* background-color: blue; */
   position: relative;
-  background-image: url('./imgs/TaiwanBanner.jpg');
+  background-image: url('./imgs/buildings.jpg');
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;

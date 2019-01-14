@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Block from './Block'
 import BookImage from './bookImage'
+import SampleChapter from './SampleChapter'
 import {Button} from "grommet"
 
 export default class DescriptionBackground extends Component {
@@ -38,6 +39,12 @@ export default class DescriptionBackground extends Component {
       return (
         <div>
           <Block language={this.props.language} color='white' float='right' textColor='black' className="Author"/>
+        </div>
+      )
+    } else if (this.state.activePage === 3) {
+      return (
+        <div>
+          <SampleChapter/>
         </div>
       )
     }
