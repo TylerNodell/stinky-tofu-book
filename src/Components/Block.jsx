@@ -15,12 +15,12 @@ export default class Block extends Component {
       position: 'relative',
       height: '100%',
       width: '100%',
-      backgroundColor: this.props.color
+      marginTop: this.props.className === "Author" ? '5%' : '10%'
     }
     return (
       <div style={blockStyles} className={this.props.className}>
-        <TextBlock language={this.props.language} float={this.props.float} textColor={this.props.textColor} className={this.props.className}/>
         {this.profilePicture()}
+        <TextBlock language={this.props.language} textColor={this.props.textColor} className={this.props.className}/>
       </div>
     )
   }

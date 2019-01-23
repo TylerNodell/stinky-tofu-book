@@ -37,10 +37,8 @@ export default class TextBlock extends Component {
 
   render() {
     const textBlock = {
-      color: this.props.textColor,
-      width: '60%',
-      float: this.props.float,
-      margin: this.props.float === 'right' ? "10vh" : "5% 2.5% 0 2.5%",
+      width: '90%',
+      margin: 'auto',
       textAlign: 'justify'
     }
     return (
