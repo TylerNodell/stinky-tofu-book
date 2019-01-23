@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import TurnImage from '../imgs/arrow-17.png'
 
-export default class SampleChapter extends Component {
-
-
-          
+export default class SampleChapter extends Component {     
 
   render() {
     const pageStyle = {
@@ -18,17 +14,18 @@ export default class SampleChapter extends Component {
     }
     const textStyle = {
       padding: '1px',
-      margin: '10px',
+      margin: '0 10px',
       textIndent: "20px",
       lineHeight: '30px',
       fontSize: '16pt',
       textAlign: "justify",
       textJustify: 'auto',
+      fontFamily: "'Roboto Slab', serif"
     }
 
     return (
       <div style={{textAlign: 'center'}}>
-        <h1 style={{margin: '2.5% auto', fontSize: '40px'}}>Chapter 7: The Outlaw Meets the In-Laws</h1>
+        <h1 style={{margin: '5vh auto', fontSize: '40px'}}>Chapter 7: The Outlaw Meets the In-Laws</h1>
         <div style={pageStyle}>
           <p style={textStyle}>The trip had taken its toll on me. I was tired, nauseated and disoriented. Here I thought I was a seasoned flier, but for the first time in my young life I was experiencing major jet lag. </p>
           <p style={textStyle}>Linda, on the other hand, had traveled back and forth from Asia to the States many times. She had tried to get me to sleep on the plane, so I could reset my internal clock to deal with the 13-hour time change. However, being in such a physically challenged environment, all attempts at slumber were futile. I arrived in Taipei wasted, worn out, unable to comprehend English let alone Mandarin, Cantonese, native Taiwanese or the broken Chinglish that my future in-laws all were about to throw at me. Each one excited for the chance to hone their English language skills and taking full advantage of the opportunity to speak with an American dude. But today I was an American vegetable.</p>

@@ -5,7 +5,6 @@ import BookImage from '../imgs/StinkyTofu.jpg'
 import AmazonButton from "../imgs/amazon-buy-button.png"
 import InstagramButton from "../imgs/instagram-button.png"
 import FacebookButton from "../imgs/facebook-button.png"
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 
 
@@ -16,14 +15,16 @@ export default class Home extends Component {
   
   redirectToAmazon = () => {
     window.top.location.href = 'https://www.amazon.com/dp/0960004319/ref=cm_sw_em_r_mt_dp_U_rvIqCbE76B36G'
-    return false
+    return false;
   }
 
   redirectToInstagram = () => {
     window.top.location.href = 'https://www.instagram.com/stinkytofuofficial/'
+    return false;
   }
   redirectToFacebook = () => {
-    window.top.location.href = "https://m.facebook.com/Stinky-Tofu-486692958401883/"
+    window.top.location.href = "https://facebook.com/Stinky-Tofu-486692958401883/"
+    return false;
   }
 
 

@@ -4,6 +4,7 @@ body {
 
 h1 {
   font-family: "Concert One", cursive;
+  font-weight: 200;
 }
 
 .section {
@@ -51,7 +52,7 @@ h1 {
   position: absolute;
   left: 5.7vw;
   z-index: 1;
-  top: 33vh;
+  top: 3vh;
   font-size: 1.8vw;
 }
 
@@ -68,7 +69,7 @@ h1 {
 }
 
 .bookBlock:hover + .popout {
-  transform: translateY(-30vh);
+  transform: translateY(30vh);
   transition: transform 200ms linear;
 }
 
@@ -245,7 +246,7 @@ h1 {
 }
 
 .option-button {
-  background-color: #f8be03;
+  background-color: white;
   margin: auto;
   width: 80%;
   border-style: solid;
@@ -254,6 +255,7 @@ h1 {
   font-size: 40px;
   margin-top: 10vh;
   padding: 22px 0;
+  border-color: green;
 }
 
 .option-button:hover {
