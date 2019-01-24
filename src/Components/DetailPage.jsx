@@ -17,7 +17,7 @@ export default class DetailPage extends Component {
     const sideBarDiv = {
       backgroundColor: '#f8be03',
       width: '30%',
-      margin: '5% 5%',
+      margin: '0 2%',
       textAlign: 'center',
       borderRight: '2px solid'
     }
@@ -30,6 +30,7 @@ export default class DetailPage extends Component {
           <h1 className="option-button" onClick={() => {this.changePage(1)}}>Book Description</h1>
           <h1 className="option-button" onClick={() => {this.changePage(2)}}>About the Author</h1>
           <h1 className="option-button" onClick={() => {this.changePage(3)}}>Sample Chapter</h1>
+          <h1 className="option-button" onClick={() => {this.changePage(4)}}>Contact Us</h1>
         </div>
         <TransitionGroup>
           <CSSTransition

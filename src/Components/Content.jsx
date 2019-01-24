@@ -3,6 +3,7 @@ import Description from './Description'
 import Author from './AuthorCard'
 import Sample from './SampleChapter'
 import Tofu from './Tofu'
+import Contact from './Contact'
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default class Content extends Component {
@@ -55,6 +56,18 @@ export default class Content extends Component {
             classNames='fade'
           >
             <Sample/>
+          </CSSTransition>
+        </TransitionGroup>
+      )
+    } else if (this.props.currentContent === 4) {
+      return (
+        <TransitionGroup>
+          <CSSTransition
+            key={4}
+            timeout={300}
+            classNames='fade'
+          >
+            <Contact/>
           </CSSTransition>
         </TransitionGroup>
       )
