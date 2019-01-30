@@ -1,8 +1,12 @@
 body {
   font-family: arial, helvetica;
+  margin: 0px;
 }
 [role='navigation'] {
-  z-index: 5
+  z-index: 1
+}
+[role='navigation-touching'] {
+  z-index: 1;
 }
 
 h1 {
@@ -138,6 +142,11 @@ h1 {
 }
 
 .instagram-button:hover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+.instagram-button-mobile:hover {
   animation: shake 1s;
   animation-iteration-count: infinite;
 }

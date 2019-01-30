@@ -6,7 +6,7 @@ import Description from './MobileDescription'
 import AuthorPage from './MobileAuthorCard'
 import SamplePage from './MobileSampleChapter'
 import Contact from './MobileContact'
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 export default class MobilePage extends Component {
 
@@ -16,7 +16,8 @@ export default class MobilePage extends Component {
   }
   state = {
     sidebarOpen: false,
-    activePage: 0
+    activePage: 4,
+    touching: 4
   }
   
 
@@ -27,25 +28,27 @@ export default class MobilePage extends Component {
     this.setState({activePage: x, sidebarOpen: false})
   }
 
+  detectTouch = () => {
+    this.setState({touching: document.querySelectorAll('[role="navigation"]').length !== 0 ? 4 : 0})
+  }
+
   openMenu = () => {
     this.setState({sidebarOpen: true})
   }
 
-
   render() {
     const sidebar = <SidebarContent changeRenderPage={this.changeRenderPage}/>
-    const pages = [<MobileHome openMenu={this.openMenu}/>, <Description />, <AuthorPage/>, <SamplePage />, <Contact />]
+    const pages = [<MobileHome openMenu={this.openMenu}/>, <Description />, <AuthorPage/>, <SamplePage />, <Contact touching={this.state.touching}/>]
     const { activePage } = this.state
     return(
       <div>
-        <div>
         <Sidebar
           sidebar={sidebar}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          styles={{ sidebar: { background: "white", position: 'fixed', zIndex: '5'} }}
+          detectTouch={this.detectTouch}
+          styles={{ sidebar: { background: "white", position: 'fixed'} }}
         />
-        </div>
           <CSSTransition
           in={true}
           appear={true}

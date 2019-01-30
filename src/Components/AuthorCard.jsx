@@ -10,7 +10,8 @@ export default class AuthorCard extends Component {
     }
     const imageStyle = {
       width: '100%',
-      borderRadius: '50%'
+      borderRadius: '50%',
+      zIndex: '-0'
     }
     const description = {
       margin: 'auto',

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import BookImage from '../imgs/StinkyTofu.jpg'
-import AmazonButton from "../imgs/amazon-buy-button.png"
-import InstagramButton from "../imgs/instagram-button.png"
 import TaipeiPicture from "../imgs/TaipeiPhone.jpg"
 
 export default class MobileHome extends Component {

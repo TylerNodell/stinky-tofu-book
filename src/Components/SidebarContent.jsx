@@ -74,6 +74,7 @@ const SidebarContent = props => {
         <a onClick={() => props.changeRenderPage(4)} style={styles.sidebarLink}>
           Follow Us
         </a>
+        {/* eslint-disable-next-line */}
         <a onClick={() => {redirectToAmazon()}}>
           <img style={{width: '80%', margin: '5% 10%'}} src={Amazon} alt="Amazon Button"/>
         </a>
