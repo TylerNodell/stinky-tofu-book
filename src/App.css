@@ -1,6 +1,9 @@
 body {
   font-family: arial, helvetica;
 }
+[role='navigation'] {
+  z-index: 5
+}
 
 h1 {
   font-family: "Concert One", cursive;
@@ -191,7 +194,6 @@ h1 {
 
 .book-image-mobile {
   width: 55vw;
-  height: 50vh;
   margin: 0vh 22.5vw;
 }
 

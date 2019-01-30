@@ -1,43 +1,59 @@
 import React, { Component } from 'react'
-import BookImage from '../imgs/StinkyTofu.jpg'
-import AmazonButton from "../imgs/amazon-buy-button.png"
-import InstagramButton from "../imgs/instagram-button.png"
-import TaipeiPicture from "../imgs/TaipeiPhone.jpg"
+import MobileHome from './MobileHome'
+import Sidebar from "react-sidebar"
+import SidebarContent from "./SidebarContent"
+import Description from './MobileDescription'
+import AuthorPage from './MobileAuthorCard'
+import SamplePage from './MobileSampleChapter'
+import Contact from './MobileContact'
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export default class MobilePage extends Component {
 
-  redirectToAmazon = () => {
-    window.top.location.href = 'https://www.amazon.com/dp/0960004319/ref=cm_sw_em_r_mt_dp_U_rvIqCbE76B36G'
-    return false
+  constructor(props) {
+    super(props)
+    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+  }
+  state = {
+    sidebarOpen: false,
+    activePage: 0
+  }
+  
+
+  onSetSidebarOpen(open) {
+    this.setState({ sidebarOpen: open });
+  }
+  changeRenderPage = (x) => {
+    this.setState({activePage: x, sidebarOpen: false})
   }
 
-  redirectToInstagram = () => {
-    window.top.location.href = 'https://www.instagram.com/stinkytofuofficial/'
+  openMenu = () => {
+    this.setState({sidebarOpen: true})
   }
+
 
   render() {
-    const container = {
-      backgroundImage: 'url(' + TaipeiPicture + ')',
-      backgroundSize:     `cover`,                      /* <------ */
-      backgroundRepeat:   'no-repeat',
-      backgroundPosition: 'center center',
-    }
+    const sidebar = <SidebarContent changeRenderPage={this.changeRenderPage}/>
+    const pages = [<MobileHome openMenu={this.openMenu}/>, <Description />, <AuthorPage/>, <SamplePage />, <Contact />]
+    const { activePage } = this.state
     return(
-      <div style={container}>
-        <div style={{width: '80vw', padding: '5vh 0', margin: '0vh 10vw', textAlign: 'center'}}>
-          <h1 style={{margin: 'auto',lineHeight: '50px', fontSize: '50px', color: 'white'}}>A Jewish man's hilarious clash with asian culture, all for the love of a China girl.</h1>
+      <div>
+        <div>
+        <Sidebar
+          sidebar={sidebar}
+          open={this.state.sidebarOpen}
+          onSetOpen={this.onSetSidebarOpen}
+          styles={{ sidebar: { background: "white", position: 'fixed', zIndex: '5'} }}
+        />
         </div>
-        <div className='book-div-mobile'>
-          <img className='book-image-mobile' src={BookImage} alt='Book' />
-        </div>
-        <div className='social-media-mobile'>
-          <a onClick={()=>{this.redirectToAmazon()}}>
-              <img src={AmazonButton} className='amazon-button-mobile' alt='Amazon Button'/>
-          </a>
-          <a onClick={() => {this.redirectToInstagram()}}>
-            <img src={InstagramButton} className='instagram-button-mobile' alt='Instagram Button' onClick={()=>{window.location.href= 'https://www.instagram.com/stinkytofuofficial/'}}/>
-          </a>
-        </div>
+          <CSSTransition
+          in={true}
+          appear={true}
+          timeout={300}
+          classNames='fade'
+          >
+            {pages[activePage]}   
+          </CSSTransition>
       </div>
     )
   }
