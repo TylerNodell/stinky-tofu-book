@@ -16,7 +16,7 @@ export default class MobilePage extends Component {
   }
   state = {
     sidebarOpen: false,
-    activePage: 4,
+    activePage: 0,
     touching: 4
   }
   
@@ -29,7 +29,7 @@ export default class MobilePage extends Component {
   }
 
   detectTouch = () => {
-    this.setState({touching: document.querySelectorAll('[role="navigation"]').length !== 0 ? 4 : 0})
+    this.setState({touching: document.querySelectorAll('[idName="hide"]').length !== 0 ? 4 : 0})
   }
 
   openMenu = () => {
