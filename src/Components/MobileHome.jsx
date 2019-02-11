@@ -31,7 +31,7 @@ export default class MobileHome extends Component {
           <img className='book-image-mobile' src={BookImage} alt='Book'/>
         </div>
         <div style={{width: '80vw', padding: '5vh 0', position: 'absolute', bottom: '2%', left: '10vw', textAlign: 'center'}}>
-          <h1 style={{margin: 'auto',lineHeight: '7vw', fontSize: '8vw', color: 'white'}}>Swipe from the left to learn more.</h1>
+          <h1 style={{margin: 'auto',lineHeight: '7vw', fontSize: '8vw', color: 'white'}}>Swipe from the left to open the menu.</h1>
         </div>
       </div>
     )

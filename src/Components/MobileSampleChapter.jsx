@@ -11,10 +11,10 @@ export default class SampleChapter extends Component {
     const textStyle = {
       padding: '1px',
       margin: '0 10px',
-      textIndent: "20px",
+      textIndent: "50px",
       lineHeight: '30px',
       fontSize: '16pt',
-      textAlign: "justify",
+      textAlign: "left",
       textJustify: 'auto',
       fontFamily: "'Roboto Slab', serif"
     }

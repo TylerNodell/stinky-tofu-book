@@ -35,9 +35,9 @@ const styles = {
   },
   tofu: {
     position: 'absolute',
-    width: '90%',
+    width: '95%',
     bottom: '0%',
-    left: '5%'
+    left: '2.5%'
   }
 };
 

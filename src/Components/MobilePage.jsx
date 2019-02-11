@@ -17,7 +17,7 @@ export default class MobilePage extends Component {
   state = {
     sidebarOpen: false,
     activePage: 0,
-    touching: 4
+    touching: document.querySelectorAll('[idtest="hide"]').length !== 0 ? 0 : 4
   }
   
 
@@ -29,7 +29,11 @@ export default class MobilePage extends Component {
   }
 
   detectTouch = () => {
-    this.setState({touching: document.querySelectorAll('[idName="hide"]').length !== 0 ? 4 : 0})
+    this.setState({touching: document.querySelectorAll('[idtest="hide"]').length !== 0 ? 0 : 4})
+    return document.querySelectorAll('[idtest="hide"]').length !== 0 ? 0 : 4
+    // console.log('====================================');
+    // console.log(document.querySelectorAll('[idtest="hide"]').length !== 0 ? 0 : 4);
+    // console.log('====================================');
   }
 
   openMenu = () => {
@@ -38,7 +42,7 @@ export default class MobilePage extends Component {
 
   render() {
     const sidebar = <SidebarContent changeRenderPage={this.changeRenderPage}/>
-    const pages = [<MobileHome openMenu={this.openMenu}/>, <Description />, <AuthorPage/>, <SamplePage />, <Contact touching={this.state.touching}/>]
+    const pages = [<MobileHome openMenu={this.openMenu}/>, <Description />, <AuthorPage/>, <SamplePage />, <Contact touching={this.state.touching} detectTouch={this.detectTouch}/>]
     const { activePage } = this.state
     return(
       <div>
