@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# browser "Save Page As" snapshots of the local dev server (bundled dev copies of dependencies)
+/src/imgs/React App.htm
+/src/imgs/React App_files/
