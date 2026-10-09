@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import FacebookButton from "../imgs/facebook-button.png"
 import InstagramButton from "../imgs/instagram-button.png"
-import { timeout } from 'q';
 
 export default class Contact extends Component {
   state={
